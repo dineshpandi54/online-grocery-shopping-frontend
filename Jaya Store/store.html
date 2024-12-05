@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAYA STORE</title>
+    <!---------------------------------------------- style link ---------------------------------------------->
+    <link rel="stylesheet" href="style.css">
+    <!---------------------------------------------- Font Awesome icons ---------------------------------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <!---------------------------------------------- NAVBAR ---------------------------------------------->
+    <nav class="navbar">
+        <h1>JAYA STORE</h1>
+        <div class="navbar-lists">
+            <p class="navbar-list"><a href="home.html">Home</a></p>
+            <p class="navbar-list"><a href="store.html">Store</a></p>
+            <p class="navbar-list"><a href="contact.html">Contact</a></p>
+            <p class="navbar-list"><a href="about.html">About</a></p>
+        </div>
+
+        <div class="navbar-menu-toggle" onclick="showNavbar()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <!----------------------------------------------- SIDE NAVBAR ---------------------------------------------->
+    <div class="side-navbar">
+        <div class="navbar-menu-toggle-close" onclick="closeNavbar()">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+
+        <div class="side-navbar-lists">
+            <p class="side-navbar-list"><a href="home.html">Home</a></p>
+            <p class="side-navbar-list"><a href="store.html">Store</a></p>
+            <p class="side-navbar-list"><a href="contact.html">Contact</a></p>
+            <p class="side-navbar-list"><a href="about.html">About</a></p>
+        </div>
+
+    </div>
+
+    <!---------------------------------------------- STORE ---------------------------------------------->
+    <div class="product-section">
+        <div class="product-header">
+            <form class="product-search">
+                <input type="text" id="search" placeholder="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </form>
+
+            <div class="cart-page-toggle" onclick="showcart()">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+
+        </div>
+        <div class="products" id="products">
+
+
+            <div class="products-box">
+                <img src="img/onion.png" alt="" id="product-img">
+                <h2>Onion</h2>
+                <p>Price: ₹60/kg</p>
+                <button class="decrease" data-product="onion">-</button>
+                <input type="" id="qty-onion" value="1" min="1" readonly >
+                <button class="increase" data-product="onion">+</button>
+                <button class="add-to-cart" data-product="onion">Add to Cart</button>
+            </div>
+
+            <div class="products-box">
+                <img src="img/carrot.png" alt="">
+                <h2>Carrot</h2>
+                <p>Price: ₹80/kg</p>
+                <button class="decrease" data-product="carrot">-</button>
+                <input type="" id="qty-carrot" value="1" min="1" readonly>
+                <button class="increase" data-product="carrot">+</button>
+                <button class="add-to-cart" data-product="carrot">Add to Cart</button>
+            </div>
+
+            <div class="products-box">
+                <img src="img/apple.png" alt="">
+                <h2>Apple</h2>
+                <p>Price: ₹120/kg</p>
+                <button class="decrease" data-product="apple">-</button>
+                <input type="" id="qty-apple" value="1" min="1" readonly>
+                <button class="increase" data-product="apple">+</button>
+                <button class="add-to-cart" data-product="apple">Add to Cart</button>
+
+            </div>
+
+            <div class="products-box">
+                <img src="img/grapes.png" alt="">
+                <h2>Grapes</h2>
+                <p>Price: ₹80/kg</p>
+                <button class="decrease" data-product="grapes">-</button>
+                <input type="" id="qty-grapes" value="1" min="1" readonly>
+                <button class="increase" data-product="grapes">+</button>
+                <button class="add-to-cart" data-product="grapes">Add to Cart</button>
+            </div>
+
+
+            <div class="products-box">
+                <img src="img/chilliPowder.png" alt="">
+                <h2>Chilli Powder</h2>
+                <p>Price: ₹10/pack</p>
+                <button class="decrease" data-product="chilliPowder">-</button>
+                <input type="" id="qty-chilliPowder" value="1" min="1" readonly>
+                <button class="increase" data-product="chilliPowder">+</button>
+                <button class="add-to-cart" data-product="chilliPowder">Add to Cart</button>
+            </div>
+
+            <div class="products-box">
+                <img src="img/curryMasala.png" alt="">
+                <h2>Curry Masala</h2>
+                <p>Price: ₹10/pack</p>
+                <button class="decrease" data-product="curryMasala">-</button>
+                <input type="" id="qty-curryMasala" value="1" min="1" readonly>
+                <button class="increase" data-product="curryMasala">+</button>
+                <button class="add-to-cart" data-product="curryMasala">Add to Cart</button>
+            </div>
+
+            <div class="products-box">
+                <img src="img/goodDay.png" alt="">
+                <h2>Good Day</h2>
+                <p>Price: ₹20/pack</p>
+                <button class="decrease" data-product="goodDay">-</button>
+                <input type="" id="qty-goodDay" value="1" min="1" readonly>
+                <button class="increase" data-product="goodDay">+</button>
+                <button class="add-to-cart" data-product="goodDay">Add to Cart</button>
+            </div>
+
+            <div class="products-box">
+                <img src="img/littleHearts.png" alt="">
+                <h2>Little Hearts</h2>
+                <p>Price: ₹10/pack</p>
+                <button class="decrease" data-product="littleHearts">-</button>
+                <input type="" id="qty-littleHearts" value="1" min="1" readonly>
+                <button class="increase" data-product="littleHearts">+</button>
+                <button class="add-to-cart" data-product="littleHearts">Add to Cart</button>
+            </div>
+
+            <div class="products-box">
+                <img src="img/kitkat.png" alt="">
+                <h2>Kitkat</h2>
+                <p>Price: ₹35/pack</p>
+                <button class="decrease" data-product="kitkat">-</button>
+                <input type="" id="qty-kitkat" value="1" min="1" readonly>
+                <button class="increase" data-product="kitkat">+</button>
+                <button class="add-to-cart" data-product="kitkat">Add to Cart</button>
+            </div>
+
+            <div class="products-box">
+                <img src="img/dairyMilk.png" alt="">
+                <h2>Dairy Milk</h2>
+                <p>Price: ₹40/pack</p>
+                <button class="decrease" data-product="dairyMilk">-</button>
+                <input type="" id="qty-dairyMilk" value="1" min="1" readonly>
+                <button class="increase" data-product="dairyMilk">+</button>
+                <button class="add-to-cart" data-product="dairyMilk">Add to Cart</button>
+            </div>
+
+            <div class="products-box">
+                <img src="img/bingo.png" alt="">
+                <h2>Bingo</h2>
+                <p>Price: ₹20/pack</p>
+                <button class="decrease" data-product="bingo">-</button>
+                <input type="" id="qty-bingo" value="1" min="1" readonly>                
+                <button class="increase" data-product="bingo">+</button>
+                <button class="add-to-cart" data-product="bingo">Add to Cart</button>
+            </div>
+
+            <div class="products-box">
+                <img src="img/kurkure.png" alt="">
+                <h2>Kurkure</h2>
+                <p>Price: ₹15/pack</p>
+                <button class="decrease" data-product="kurkure">-</button>
+                <input type="" id="qty-kurkure" value="1" min="1" readonly>
+                <button class="increase" data-product="kurkure">+</button>
+                <button class="add-to-cart" data-product="kurkure">Add to Cart</button>
+            </div>
+
+            <div class="products-box">
+                <img src="img/maaza.png" alt="">
+                <h2>Maaza</h2>
+                <p>Price: ₹30/pack</p>
+                <button class="decrease" data-product="maaza">-</button>
+                <input type="" id="qty-maaza" value="1" min="1" readonly>
+                <button class="increase" data-product="maaza">+</button>
+                <button class="add-to-cart" data-product="maaza">Add to Cart</button>
+            </div>
+
+            <div class="products-box">
+                <img src="img/pepsi.png" alt="">
+                <h2>Pepsi</h2>
+                <p>Price: ₹33/pack</p>
+                <button class="decrease" data-product="pepsi">-</button>
+                <input type="" id="qty-pepsi" value="1" min="1" readonly>
+                <button class="increase" data-product="pepsi">+</button>
+                <button class="add-to-cart" data-product="pepsi">Add to Cart</button>
+            </div>
+
+            <div class="products-box">
+                <img src="img/note.png" alt="">
+                <h2>Note</h2>
+                <p>Price: ₹45/pack</p>
+                <button class="decrease" data-product="note">-</button>
+                <input type="" id="qty-note" value="1" min="1" readonly>
+                <button class="increase" data-product="note">+</button>
+                <button class="add-to-cart" data-product="note">Add to Cart</button>
+            </div>
+
+            <div class="products-box">
+                <img src="img/pen.png" alt="">
+                <h2>Pen</h2>
+                <p>Price: ₹70/pack</p>
+                <button class="decrease" data-product="pen">-</button>
+                <input type="" id="qty-pen" value="1" min="1" readonly>
+                <button class="increase" data-product="pen">+</button>
+                <button class="add-to-cart" data-product="pen">Add to Cart</button>
+            </div>
+
+            <div class="products-box">
+                <img src="img/medimix.png" alt="">
+                <h2>Medimix</h2>
+                <p>Price: ₹30/pack</p>
+                <button class="decrease" data-product="medimix">-</button>
+                <input type="" id="qty-medimix" value="1" min="1" readonly>
+                <button class="increase" data-product="medimix">+</button>
+                <button class="add-to-cart" data-product="medimix">Add to Cart</button>
+            </div>
+
+            <div class="products-box">
+                <img src="img/dove.png" alt="">
+                <h2>Dove</h2>
+                <p>Price: ₹45/pack</p>
+                <button class="decrease" data-product="dove">-</button>
+                <input type="" id="qty-dove" value="1" min="1" readonly>
+                <button class="increase" data-product="dove">+</button>
+                <button class="add-to-cart" data-product="dove">Add to Cart</button>
+            </div>
+
+            <div class="products-box">
+                <img src="img/tide.png" alt="">
+                <h2>Tide</h2>
+                <p>Price: ₹110/pack</p>
+                <button class="decrease" data-product="tide">-</button>
+                <input type="" id="qty-tide" value="1" min="1" readonly>
+                <button class="increase" data-product="tide">+</button>
+                <button class="add-to-cart" data-product="tide">Add to Cart</button>
+            </div>
+
+            <div class="products-box">
+                <img src="img/ariel.png" alt="">
+                <h2>Ariel</h2>
+                <p>Price: ₹60/pack</p>
+                <button class="decrease" data-product="ariel">-</button>
+                <input type="" id="qty-ariel" value="1" min="1" readonly>
+                <button class="increase" data-product="ariel">+</button>
+                <button class="add-to-cart" data-product="ariel">Add to Cart</button>
+            </div>
+        </div>
+
+    </div>
+    <!---------------------------------------------- CART ---------------------------------------------->
+    <div class="cart-popup-overlay"></div>
+    <div class="cart-popup">
+        <div class="cart-page-close-container">
+            <div class="cart-page-close" onclick="closeCart()">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+
+        <h2>Cart</h2>
+        <div class="cart" id="cart">
+            
+        </div>
+        <div class="cart-total" id="total-amount">Total Amount: ₹0</div>
+    </div>
+
+
+    <!---------------------------------------------- FOOTER ---------------------------------------------->
+
+    <div class="footer-container">
+        <div class="footer">
+            <div class="footer-box-1">
+                <h1 class="heading-text">JAYA STORE</h1>
+                <p>Enjoy Shopping with our best products</p>
+                <div class="footer-icon-container">
+                    <i class="fa-brands fa-instagram" style="color: white;"></i>
+                    <i class="fa-brands fa-twitter" style="color: white;"></i>
+                    <i class="fa-brands fa-facebook" style="color: white;"></i>
+                </div>
+            </div>
+        </div>
+        <p>@2024 Jaya_store.com</p>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="home.js"></script>
+</body>
